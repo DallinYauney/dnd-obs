@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Pixelated;
+    src: url(pixelated.ttf);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    font-family: Pixelated;
+    --border: 8px;
+    --border-calc: calc(2 * var(--border));
+}
+
+#health {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.box-outline {
+    background: #ad2503;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 0 var(--border) rgb(4, 83, 187) inset;
+    /* border: 8px solid rgb(4, 83, 187); */
+    box-sizing: border-box;
+    padding: var(--border);
+    /* border-radius: 36px; */
+}
+
+.box-fill {
+    background: rgb(79, 114, 79);
+    position: absolute;
+    height: calc(100% - var(--border-calc));
+    width: 0;
+    transition: 2s;
+}
+
+.bonus-fill {
+    background:rgb(4, 83, 187);
+    position: absolute;
+    height: calc(100% - var(--border-calc));
+    width: 0;
+    transition: 2s;
+}
+
+.number {
+    color: white;
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 6px black;
+}
